@@ -74,6 +74,11 @@ class None implements Option<unknown> {
   andThen<A, B>(this: this, f: (a: A) => Option<B>) {
     return this.flatMap(f);
   }
+
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
+  filter<A>(this: this, predicate: (a: A) => boolean) {
+    return this;
+  }
 }
 
 export const none = new None();

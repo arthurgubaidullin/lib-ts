@@ -1,3 +1,4 @@
+import { none } from "./none.js";
 import { type Option } from "./option.js";
 
 class Some<A> implements Option<A> {
@@ -69,6 +70,10 @@ class Some<A> implements Option<A> {
 
   andThen<B>(this: this, f: (a: A) => Option<B>) {
     return this.flatMap(f);
+  }
+
+  filter(this: this, predicate: (a: A) => boolean): Option<A> {
+    return predicate(this.value) ? this : none;
   }
 }
 
