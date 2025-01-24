@@ -9,6 +9,8 @@ export interface Option<A> {
 
   readonly map: <B>(f: (a: A) => B) => Option<B>;
 
+  readonly mapOr: <B>(defaultValue: B, f: (a: A) => B) => B;
+
   readonly flatMap: <B>(f: (a: A) => Option<B>) => Option<B>;
 
   readonly fold: <B>(onNone: () => B, onSome: (a: A) => B) => B;
