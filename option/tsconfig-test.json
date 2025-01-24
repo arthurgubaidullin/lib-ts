@@ -7,5 +7,5 @@
     "tsBuildInfoFile": "test.tsbuildinfo"
   },
   "include": ["src"],
-  "exclude": ["dist"]
+  "exclude": [".turbo", "dist"]
 }
