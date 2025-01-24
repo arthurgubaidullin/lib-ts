@@ -21,6 +21,11 @@ class None implements Option<unknown> {
   }
 
   // eslint-disable-next-line @typescript-eslint/no-unused-vars
+  isNoneOr<A>(this: this, predicate: (a: A) => boolean) {
+    return this.isNone();
+  }
+
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   map<A, B>(this: this, f: (a: A) => B) {
     return this;
   }

@@ -37,6 +37,12 @@ describe("some", () => {
     expect(option.isNone()).not.toBeTruthy();
   });
 
+  it("is not none or", () => {
+    const option: Option<number> = some(0);
+
+    expect(option.isNoneOr(() => true)).toBeTruthy();
+  });
+
   it("maps", () => {
     const option: Option<number> = some(0).map(() => 1);
 

@@ -5,6 +5,8 @@ export interface Option<A> {
 
   readonly isNone: () => boolean;
 
+  readonly isNoneOr: (predicate: (a: A) => boolean) => boolean;
+
   readonly map: <B>(f: (a: A) => B) => Option<B>;
 
   readonly flatMap: <B>(f: (a: A) => Option<B>) => Option<B>;

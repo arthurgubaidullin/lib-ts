@@ -19,6 +19,10 @@ class Some<A> implements Option<A> {
     return false;
   }
 
+  isNoneOr(this: this, predicate: (a: A) => boolean) {
+    return predicate(this.value);
+  }
+
   map<B>(this: this, f: (a: A) => B) {
     return new Some(f(this.value));
   }
