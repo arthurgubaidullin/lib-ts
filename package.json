@@ -1,4 +1,11 @@
 {
-  "workspaces": [],
+  "type": "module",
+  "workspaces": [
+    "option"
+  ],
+  "author": {
+    "email": "lapteuh+lib-ts@gmail.com",
+    "name": "Artur Gubaidullin"
+  },
   "private": true
 }
