@@ -3,51 +3,13 @@
   "tasks": [
     {
       "type": "shell",
-      "command": ["npm", "run", "lint", "--workspaces", "--if-present"],
-      "problemMatcher": ["$tsc"],
-      "group": {
-        "kind": "test",
-        "isDefault": false
-      },
-      "label": "npm: lint",
-      "presentation": {
-        "echo": true,
-        "reveal": "silent",
-        "focus": false,
-        "panel": "dedicated",
-        "showReuseMessage": true,
-        "clear": true
-      },
-      "dependsOn": ["npm: build"]
-    },
-    {
-      "type": "shell",
-      "command": ["npm", "run", "test", "--workspaces", "--if-present"],
-      "problemMatcher": ["$tsc"],
-      "group": {
-        "kind": "test",
-        "isDefault": false
-      },
-      "label": "npm: test",
-      "presentation": {
-        "echo": true,
-        "reveal": "silent",
-        "focus": false,
-        "panel": "dedicated",
-        "showReuseMessage": true,
-        "clear": true
-      },
-      "dependsOn": ["npm: build"]
-    },
-    {
-      "type": "shell",
-      "command": ["npm", "run", "build", "--workspaces", "--if-present"],
+      "command": ["turbo", "build", "test", "lint", "--ui", "tui"],
       "problemMatcher": ["$tsc"],
       "group": {
         "kind": "build",
-        "isDefault": false
+        "isDefault": true
       },
-      "label": "npm: build",
+      "label": "turbo: build test lint",
       "presentation": {
         "echo": true,
         "reveal": "silent",
@@ -56,14 +18,6 @@
         "showReuseMessage": true,
         "clear": true
       }
-    },
-    {
-      "label": "build",
-      "group": {
-        "kind": "build",
-        "isDefault": true
-      },
-      "dependsOn": ["npm: build", "npm: test", "npm: lint"]
     }
   ]
 }
