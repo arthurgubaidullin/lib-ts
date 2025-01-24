@@ -65,6 +65,11 @@ class None implements Option<unknown> {
   inspect<A>(this: this, f: (a: A) => void) {
     return this;
   }
+
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
+  and<B>(this: this, b: Option<B>) {
+    return none;
+  }
 }
 
 export const none = new None();

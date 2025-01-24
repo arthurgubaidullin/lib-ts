@@ -62,6 +62,10 @@ class Some<A> implements Option<A> {
     f(this.value);
     return this;
   }
+
+  and<B>(this: this, b: Option<B>) {
+    return b;
+  }
 }
 
 export const some = <A>(a: A) => new Some<A>(a);

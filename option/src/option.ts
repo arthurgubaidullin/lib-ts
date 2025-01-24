@@ -24,4 +24,6 @@ export interface Option<A> {
   readonly unwrapOrElse: (f: () => A) => A;
 
   readonly inspect: (f: (a: A) => void) => Option<A>;
+
+  readonly and: <B>(b: Option<B>) => Option<B>;
 }
