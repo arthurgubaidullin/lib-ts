@@ -11,6 +11,11 @@ class None implements Option<unknown> {
     return false;
   }
 
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
+  isSomeAnd<A>(this: this, f: (a: A) => boolean) {
+    return false;
+  }
+
   isNone(this: this) {
     return true;
   }

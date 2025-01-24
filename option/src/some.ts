@@ -11,6 +11,10 @@ class Some<A> implements Option<A> {
     return true;
   }
 
+  isSomeAnd(this: this, f: (a: A) => boolean) {
+    return this.isSome() && f(this.value);
+  }
+
   isNone(this: this) {
     return false;
   }

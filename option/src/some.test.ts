@@ -25,6 +25,12 @@ describe("some", () => {
     expect(option.isSome()).toBeTruthy();
   });
 
+  it("is some and", () => {
+    const option: Option<number> = some(0);
+
+    expect(option.isSomeAnd((n) => n === 0)).toBeTruthy();
+  });
+
   it("is not none", () => {
     const option: Option<number> = some(0);
 

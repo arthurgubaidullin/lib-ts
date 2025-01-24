@@ -1,6 +1,8 @@
 export interface Option<A> {
   readonly isSome: () => boolean;
 
+  readonly isSomeAnd: (f: (a: A) => boolean) => boolean;
+
   readonly isNone: () => boolean;
 
   readonly map: <B>(f: (a: A) => B) => Option<B>;

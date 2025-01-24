@@ -31,6 +31,12 @@ describe("none", () => {
     expect(option.isSome()).not.toBeTruthy();
   });
 
+  it("is not some and", () => {
+    const option: Option<number> = none;
+
+    expect(option.isSomeAnd((n) => n === 0)).not.toBeTruthy();
+  });
+
   it("does not map", () => {
     const option: Option<number> = none.map(() => 1);
 
