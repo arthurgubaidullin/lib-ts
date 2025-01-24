@@ -8,6 +8,11 @@
     "email": "lapteuh+lib-ts@gmail.com",
     "name": "Artur Gubaidullin"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/arthurgubaidullin/lib-ts.git",
+    "directory": "option"
+  },
   "license": "MIT",
   "devDependencies": {
     "typescript": "^5.7.3",
