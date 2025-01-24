@@ -18,4 +18,6 @@ export interface Option<A> {
   readonly unwrapOr: (defaultValue: A) => A;
 
   readonly unwrapOrElse: (f: () => A) => A;
+
+  readonly inspect: (f: (a: A) => void) => Option<A>;
 }

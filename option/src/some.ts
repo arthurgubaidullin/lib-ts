@@ -49,6 +49,11 @@ class Some<A> implements Option<A> {
   unwrapOrElse(this: this, f: () => A) {
     return this.value;
   }
+
+  inspect(this: this, f: (a: A) => void) {
+    f(this.value);
+    return this;
+  }
 }
 
 export const some = <A>(a: A) => new Some<A>(a);

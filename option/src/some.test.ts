@@ -69,4 +69,14 @@ describe("some", () => {
 
     expect(result).toStrictEqual(0);
   });
+
+  it("inspect value", () => {
+    let proof: number | null = null;
+
+    some(0).inspect((a) => {
+      proof = a;
+    });
+
+    expect(proof).toStrictEqual(0);
+  });
 });

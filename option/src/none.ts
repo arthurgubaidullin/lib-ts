@@ -51,6 +51,11 @@ class None implements Option<unknown> {
   unwrapOrElse<A>(this: this, f: () => A) {
     return f();
   }
+
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
+  inspect<A>(this: this, f: (a: A) => void) {
+    return this;
+  }
 }
 
 export const none = new None();
