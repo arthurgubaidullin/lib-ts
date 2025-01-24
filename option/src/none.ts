@@ -35,6 +35,10 @@ class None implements Option<unknown> {
     return defaultValue;
   }
 
+  mapOrElse<A, B>(this: this, g: () => B, f: (a: A) => B) {
+    return this.mapOr(g(), f);
+  }
+
   // eslint-disable-next-line @typescript-eslint/no-unused-vars
   flatMap<A, B>(this: this, f: (a: A) => Option<B>) {
     return this;

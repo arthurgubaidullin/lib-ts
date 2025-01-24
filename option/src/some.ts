@@ -31,6 +31,10 @@ class Some<A> implements Option<A> {
     return this.map(f).unwrapOr(defaultValue);
   }
 
+  mapOrElse<B>(this: this, g: () => B, f: (a: A) => B) {
+    return this.mapOr(g(), f);
+  }
+
   flatMap<B>(this: this, f: (a: A) => Option<B>) {
     return f(this.value);
   }
