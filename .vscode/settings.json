@@ -1,3 +1,8 @@
 {
-  "cSpell.words": ["arthurgubaidullin", "Artur", "Gubaidullin"]
+  "cSpell.words": ["arthurgubaidullin", "Artur", "Gubaidullin"],
+  "files.exclude": {
+    "**/*.tsbuildinfo": true,
+    "*/node_modules/**": true,
+    "**/dist/**": true
+  }
 }
