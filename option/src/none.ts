@@ -71,6 +71,10 @@ class None implements Option<unknown> {
     return none;
   }
 
+  or<A>(this: this, b: Option<A>) {
+    return b;
+  }
+
   andThen<A, B>(this: this, f: (a: A) => Option<B>) {
     return this.flatMap(f);
   }

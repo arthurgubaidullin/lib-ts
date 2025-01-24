@@ -68,6 +68,11 @@ class Some<A> implements Option<A> {
     return b;
   }
 
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
+  or(this: this, b: Option<A>) {
+    return this;
+  }
+
   andThen<B>(this: this, f: (a: A) => Option<B>) {
     return this.flatMap(f);
   }

@@ -27,6 +27,8 @@ export interface Option<A> {
 
   readonly and: <B>(b: Option<B>) => Option<B>;
 
+  readonly or: (b: Option<A>) => Option<A>;
+
   readonly andThen: <B>(f: (a: A) => Option<B>) => Option<B>;
 
   readonly filter: (predicate: (a: A) => boolean) => Option<A>;
