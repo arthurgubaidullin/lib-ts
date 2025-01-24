@@ -8,7 +8,7 @@
     "build": "tsc -p tsconfig-build.json",
     "test": "vitest . --run --pass-with-no-tests",
     "lint": "eslint .",
-    "clean": "rm -rf dist/* && tsc -b --clean"
+    "prebuild": "rm -rf dist/* *.tsbuildinfo"
   },
   "author": {
     "email": "lapteuh+lib-ts@gmail.com",
