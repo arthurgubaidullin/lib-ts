@@ -31,17 +31,22 @@ class Some<A> implements Option<A> {
     return f(this.value);
   }
 
-  fold<B>(onNone: () => B, onSome: (a: A) => B) {
+  fold<B>(this: this, onNone: () => B, onSome: (a: A) => B) {
     return onSome(this.value);
   }
 
   // eslint-disable-next-line @typescript-eslint/no-unused-vars
-  expect(message: string): A {
+  expect(this: this, message: string): A {
     return this.value;
   }
 
   // eslint-disable-next-line @typescript-eslint/no-unused-vars
-  unwrapOr(defaultValue: A) {
+  unwrapOr(this: this, defaultValue: A) {
+    return this.value;
+  }
+
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
+  unwrapOrElse(this: this, f: () => A) {
     return this.value;
   }
 }

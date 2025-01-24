@@ -75,4 +75,10 @@ describe("none", () => {
 
     expect(value).toStrictEqual("test");
   });
+
+  it("returns default value on unwrap or else", () => {
+    const value = none.unwrapOrElse(() => "test");
+
+    expect(value).toStrictEqual("test");
+  });
 });

@@ -16,4 +16,6 @@ export interface Option<A> {
   readonly expect: (message: string) => A;
 
   readonly unwrapOr: (defaultValue: A) => A;
+
+  readonly unwrapOrElse: (f: () => A) => A;
 }

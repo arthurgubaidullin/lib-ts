@@ -36,16 +36,20 @@ class None implements Option<unknown> {
   }
 
   // eslint-disable-next-line @typescript-eslint/no-unused-vars
-  fold<A, B>(onNone: () => B, onSome: (a: A) => B) {
+  fold<A, B>(this: this, onNone: () => B, onSome: (a: A) => B) {
     return onNone();
   }
 
-  expect<A>(message: string): A {
+  expect<A>(this: this, message: string): A {
     throw new Error(message);
   }
 
-  unwrapOr<A>(defaultValue: A) {
+  unwrapOr<A>(this: this, defaultValue: A) {
     return defaultValue;
+  }
+
+  unwrapOrElse<A>(this: this, f: () => A) {
+    return f();
   }
 }
 
