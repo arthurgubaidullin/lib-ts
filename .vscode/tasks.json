@@ -3,11 +3,30 @@
   "tasks": [
     {
       "type": "shell",
+      "command": ["npm", "run", "lint", "--workspaces", "--if-present"],
+      "problemMatcher": ["$tsc"],
+      "group": {
+        "kind": "test",
+        "isDefault": false
+      },
+      "label": "npm: lint",
+      "presentation": {
+        "echo": true,
+        "reveal": "silent",
+        "focus": false,
+        "panel": "dedicated",
+        "showReuseMessage": true,
+        "clear": true
+      },
+      "dependsOn": ["npm: build"]
+    },
+    {
+      "type": "shell",
       "command": ["npm", "run", "test", "--workspaces", "--if-present"],
       "problemMatcher": ["$tsc"],
       "group": {
         "kind": "test",
-        "isDefault": true
+        "isDefault": false
       },
       "label": "npm: test",
       "presentation": {
@@ -44,7 +63,7 @@
         "kind": "build",
         "isDefault": true
       },
-      "dependsOn": ["npm: build", "npm: test"]
+      "dependsOn": ["npm: build", "npm: test", "npm: lint"]
     }
   ]
 }
