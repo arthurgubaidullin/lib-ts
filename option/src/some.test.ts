@@ -46,7 +46,7 @@ describe("some", () => {
   it("folds to some handler", () => {
     const result = some(0).fold(
       () => 1,
-      () => 2
+      () => 2,
     );
 
     expect(result).toStrictEqual(2);

@@ -46,7 +46,7 @@ describe("none", () => {
   it("folds to none handler", () => {
     const result = none.fold(
       () => 1,
-      () => 2
+      () => 2,
     );
 
     expect(result).toStrictEqual(1);
