@@ -3,6 +3,9 @@
   "workspaces": [
     "option"
   ],
+  "scripts": {
+    "format:write": "prettier . --write"
+  },
   "author": {
     "email": "lapteuh+lib-ts@gmail.com",
     "name": "Artur Gubaidullin"
@@ -11,5 +14,8 @@
     "type": "git",
     "url": "git+https://github.com/arthurgubaidullin/lib-ts.git"
   },
-  "private": true
+  "private": true,
+  "devDependencies": {
+    "prettier": "^3.4.2"
+  }
 }
