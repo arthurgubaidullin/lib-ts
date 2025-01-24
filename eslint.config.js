@@ -14,4 +14,5 @@ export default [
       "require-await": "error",
     },
   },
+  { ignores: ["**/dist/**", "**/.turbo/**", "**/node_modules/**"] },
 ];
