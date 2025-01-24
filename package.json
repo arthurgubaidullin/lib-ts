@@ -4,6 +4,9 @@
     "option"
   ],
   "scripts": {
+    "build": "turbo build",
+    "test": "turbo test",
+    "lint": "turbo lint",
     "format:write": "prettier . --write",
     "format:check": "prettier . --check"
   },
