@@ -69,4 +69,10 @@ describe("none", () => {
 
     expect(f).toThrowError("Boom!");
   });
+
+  it("returns default value on unwrap or", () => {
+    const value = none.unwrapOr("test");
+
+    expect(value).toStrictEqual("test");
+  });
 });

@@ -43,6 +43,10 @@ class None implements Option<unknown> {
   expect<A>(message: string): A {
     throw new Error(message);
   }
+
+  unwrapOr<A>(defaultValue: A) {
+    return defaultValue;
+  }
 }
 
 export const none = new None();

@@ -14,4 +14,6 @@ export interface Option<A> {
   readonly fold: <B>(onNone: () => B, onSome: (a: A) => B) => B;
 
   readonly expect: (message: string) => A;
+
+  readonly unwrapOr: (defaultValue: A) => A;
 }

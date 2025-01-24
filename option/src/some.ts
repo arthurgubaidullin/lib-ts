@@ -39,6 +39,11 @@ class Some<A> implements Option<A> {
   expect(message: string): A {
     return this.value;
   }
+
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
+  unwrapOr(defaultValue: A) {
+    return this.value;
+  }
 }
 
 export const some = <A>(a: A) => new Some<A>(a);
