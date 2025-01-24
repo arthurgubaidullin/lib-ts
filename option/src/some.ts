@@ -66,6 +66,10 @@ class Some<A> implements Option<A> {
   and<B>(this: this, b: Option<B>) {
     return b;
   }
+
+  andThen<B>(this: this, f: (a: A) => Option<B>) {
+    return this.flatMap(f);
+  }
 }
 
 export const some = <A>(a: A) => new Some<A>(a);
