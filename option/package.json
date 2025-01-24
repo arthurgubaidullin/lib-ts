@@ -8,5 +8,8 @@
     "email": "lapteuh+lib-ts@gmail.com",
     "name": "Artur Gubaidullin"
   },
-  "license": "MIT"
+  "license": "MIT",
+  "devDependencies": {
+    "typescript": "^5.7.3"
+  }
 }
