@@ -23,6 +23,4 @@ jobs:
           node-version: ${{ matrix.node-version }}
           cache: "npm"
       - run: npm ci
-      - run: npm run build --workspaces --if-present --verbose
-      - run: npm run test --workspaces --if-present --verbose
-      - run: npm run lint --workspaces --if-present --verbose
+      - run: turbo build test lint
