@@ -11,6 +11,7 @@ export default [
   {
     rules: {
       "@typescript-eslint/method-signature-style": "error",
+      "require-await": "error",
     },
   },
 ];
