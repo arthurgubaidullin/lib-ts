@@ -1,1 +1,3 @@
-export const add = <T extends number>(x: T, y: T) => x + y;
+export * from "./option.js";
+export * from "./none.js";
+export * from "./some.js";
