@@ -3,6 +3,10 @@ name: Node.js CI
 on:
   push:
 
+env:
+  TURBO_TELEMETRY_DISABLED: 1
+  DO_NOT_TRACK: 1
+
 jobs:
   build:
     runs-on: ubuntu-latest
