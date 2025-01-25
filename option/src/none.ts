@@ -1,9 +1,11 @@
 import { type Option } from "./option.js";
 
-class None implements Option<unknown> {
+export class None implements Option<unknown> {
   readonly _tag = "None" as const;
 
-  constructor() {
+  static value = new this();
+
+  private constructor() {
     Object.freeze(this);
   }
 
@@ -85,4 +87,4 @@ class None implements Option<unknown> {
   }
 }
 
-export const none = new None();
+export const none = None.value;
