@@ -1,10 +1,14 @@
 import { none } from "./none.js";
 import { type Option } from "./option.js";
 
-class Some<A> implements Option<A> {
+export class Some<A> implements Option<A> {
   readonly _tag = "Some" as const;
 
-  constructor(public readonly value: A) {
+  static of<A>(a: A) {
+    return new this<A>(a);
+  }
+
+  private constructor(public readonly value: A) {
     Object.freeze(this);
   }
 
@@ -82,4 +86,4 @@ class Some<A> implements Option<A> {
   }
 }
 
-export const some = <A>(a: A) => new Some<A>(a);
+export const some = <A>(a: A) => Some.of(a);
