@@ -1,6 +1,7 @@
 {
   "type": "module",
   "workspaces": [
+    "function",
     "result/type",
     "option",
     "bundle",
