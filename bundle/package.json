@@ -2,8 +2,16 @@
   "name": "@arthurgubaidullin/lib-ts",
   "version": "0.1.0",
   "type": "module",
-  "main": "dist/index.js",
-  "types": "dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./index.js",
+      "types": "./index.d.ts"
+    },
+    "./result": {
+      "import": "./result.js",
+      "types": "./result.d.ts"
+    }
+  },
   "scripts": {
     "build": "tsc -p tsconfig-build.json",
     "test": "vitest . --run --pass-with-no-tests",
@@ -20,6 +28,9 @@
     "directory": "option"
   },
   "license": "MIT",
+  "dependencies": {
+    "@arthurgubaidullin/result-type": "*"
+  },
   "devDependencies": {
     "typescript": "^5.7.3",
     "vitest": "^3.0.4"
