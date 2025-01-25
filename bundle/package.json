@@ -27,7 +27,8 @@
     "test": "vitest . --run --pass-with-no-tests",
     "lint": "eslint .",
     "prebuild": "rimraf dist/* *.tsbuildinfo",
-    "prepack": "mkdir -p node_modules && ln -sfdr ../node_modules/@arthurgubaidullin/ ./node_modules/"
+    "prepack": "mkdir -p node_modules && ln -sfdr ../node_modules/@arthurgubaidullin/ ./node_modules/",
+    "postpack": "rm -rf ./node_modules"
   },
   "author": {
     "email": "lapteuh+lib-ts@gmail.com",
