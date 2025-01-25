@@ -12,6 +12,7 @@ export default [
     rules: {
       "@typescript-eslint/method-signature-style": "error",
       "require-await": "error",
+      "arrow-body-style": ["error", "as-needed"],
     },
   },
   { ignores: ["**/dist/**", "**/.turbo/**", "**/node_modules/**"] },
