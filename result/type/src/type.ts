@@ -15,12 +15,12 @@ interface Error<E> {
 
 export type Result<A, E> = Ok<A> | Error<E>;
 
-export const ok = <A>(value: A): Ok<A> => ({
+export const ok = <A = never, E = never>(value: A): Result<A, E> => ({
   _tag: Tag.Ok,
   value,
 });
 
-export const error = <A>(value: A): Error<A> => ({
+export const error = <A = never, E = never>(value: E): Result<A, E> => ({
   _tag: Tag.Error,
   value,
 });
