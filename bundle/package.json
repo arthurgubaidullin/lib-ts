@@ -12,6 +12,10 @@
     "./Result": {
       "import": "./dist/result.js",
       "types": "./dist/result.d.ts"
+    },
+    "./function": {
+      "import": "./dist/function.js",
+      "types": "./dist/function.d.ts"
     }
   },
   "scripts": {
@@ -32,6 +36,7 @@
   "dependencies": {},
   "devDependencies": {
     "@arthurgubaidullin/result-type": "*",
+    "@arthurgubaidullin/function": "*",
     "typescript": "^5.7.3",
     "vite": "^6.0.11",
     "vitest": "^3.0.4"

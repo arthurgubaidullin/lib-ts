@@ -15,6 +15,7 @@ export default defineConfig({
       entry: {
         index: resolve(__dirname, "src/index.ts"),
         result: resolve(__dirname, "src/result.ts"),
+        function: resolve(__dirname, "src/function.ts"),
       },
       name: "@arthurgubaidullin/lib-ts",
       formats: ["es"],
