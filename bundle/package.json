@@ -29,10 +29,9 @@
     "url": "git+https://github.com/arthurgubaidullin/lib-ts.git"
   },
   "license": "MIT",
-  "dependencies": {
-    "@arthurgubaidullin/result-type": "*"
-  },
+  "dependencies": {},
   "devDependencies": {
+    "@arthurgubaidullin/result-type": "*",
     "typescript": "^5.7.3",
     "vite": "^6.0.11",
     "vitest": "^3.0.4"
