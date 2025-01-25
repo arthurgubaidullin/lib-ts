@@ -13,6 +13,10 @@
       "import": "./dist/result.js",
       "types": "./dist/result.d.ts"
     },
+    "./Option": {
+      "import": "./dist/option.js",
+      "types": "./dist/option.d.ts"
+    },
     "./function": {
       "import": "./dist/function.js",
       "types": "./dist/function.d.ts"
@@ -35,13 +39,14 @@
   "license": "MIT",
   "bundleDependencies": [
     "@arthurgubaidullin/result-type",
+    "@arthurgubaidullin/option-type",
     "@arthurgubaidullin/function"
   ],
-  "dependencies": {
-    "@arthurgubaidullin/result-type": "*",
-    "@arthurgubaidullin/function": "*"
-  },
+  "dependencies": {},
   "devDependencies": {
+    "@arthurgubaidullin/result-type": "*",
+    "@arthurgubaidullin/option-type": "*",
+    "@arthurgubaidullin/function": "*",
     "typescript": "^5.7.3",
     "vitest": "^3.0.4"
   },
