@@ -1,18 +1,21 @@
 import { pipe } from "@arthurgubaidullin/function";
-import { mapError } from "./map-error.js";
-import { error, ok } from "./type.js";
+import * as Result from "./index.js";
 
 const double = (a: number) => a * 2;
 
 it("map-error", () => {
   expect(
     pipe(
-      ok("test"),
-      mapError(() => "ok"),
+      Result.ok("test"),
+      Result.mapError(() => "ok"),
     ),
-  ).toEqual(ok("test"));
+  ).toEqual(Result.ok("test"));
 
-  expect(pipe(ok(2), mapError(double), mapError(double))).toEqual(ok(2));
+  expect(
+    pipe(Result.ok(2), Result.mapError(double), Result.mapError(double)),
+  ).toEqual(Result.ok(2));
 
-  expect(pipe(error(2), mapError(double), mapError(double))).toEqual(error(8));
+  expect(
+    pipe(Result.error(2), Result.mapError(double), Result.mapError(double)),
+  ).toEqual(Result.error(8));
 });
