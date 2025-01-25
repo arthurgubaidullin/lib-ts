@@ -3,7 +3,7 @@
   "workspaces": [
     "function",
     "result/type",
-    "option",
+    "option/type",
     "bundle",
     "sandbox"
   ],

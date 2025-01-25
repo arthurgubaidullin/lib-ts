@@ -1,5 +1,5 @@
 {
-  "name": "@arthurgubaidullin/option",
+  "name": "@arthurgubaidullin/option-type",
   "version": "0.1.0",
   "type": "module",
   "main": "dist/index.js",
