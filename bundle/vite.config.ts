@@ -16,7 +16,7 @@ export default defineConfig({
         index: resolve(__dirname, "src/index.ts"),
         result: resolve(__dirname, "src/result.ts"),
       },
-      name: "@arthurgubaidullin/lib",
+      name: "@arthurgubaidullin/lib-ts",
       formats: ["es"],
     },
     rollupOptions: {
