@@ -25,7 +25,8 @@ export const error = <A>(value: A): Error<A> => ({
   value,
 });
 
-export const isOk = <A, E>(result: Result<A, E>) => result._tag === Tag.Ok;
+export const isOk = <A, E>(result: Result<A, E>): result is Ok<A> =>
+  result._tag === Tag.Ok;
 
-export const isError = <A, E>(result: Result<A, E>) =>
+export const isError = <A, E>(result: Result<A, E>): result is Error<E> =>
   result._tag === Tag.Error;
