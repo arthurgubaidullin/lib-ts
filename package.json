@@ -1,6 +1,7 @@
 {
   "type": "module",
   "workspaces": [
+    "result/type",
     "option"
   ],
   "scripts": {
