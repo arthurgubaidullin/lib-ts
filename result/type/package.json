@@ -20,6 +20,9 @@
     "directory": "option"
   },
   "license": "MIT",
+  "peerDependencies": {
+    "@arthurgubaidullin/function": "*"
+  },
   "devDependencies": {
     "typescript": "^5.7.3",
     "vitest": "^3.0.4"
