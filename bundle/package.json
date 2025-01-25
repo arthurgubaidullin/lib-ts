@@ -26,7 +26,8 @@
     "build": "tsc -p tsconfig-build.json",
     "test": "vitest . --run --pass-with-no-tests",
     "lint": "eslint .",
-    "prebuild": "rimraf dist/* *.tsbuildinfo"
+    "prebuild": "rimraf dist/* *.tsbuildinfo",
+    "prepack": "mkdir -p node_modules && ln -sfdr ../node_modules/@arthurgubaidullin/ ./node_modules/"
   },
   "author": {
     "email": "lapteuh+lib-ts@gmail.com",
