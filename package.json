@@ -2,7 +2,8 @@
   "type": "module",
   "workspaces": [
     "result/type",
-    "option"
+    "option",
+    "bundle"
   ],
   "scripts": {
     "build": "turbo build",

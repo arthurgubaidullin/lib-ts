@@ -1,0 +1,32 @@
+{
+  "name": "@arthurgubaidullin/lib-ts",
+  "version": "0.1.0",
+  "type": "module",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "build": "tsc -p tsconfig-build.json",
+    "test": "vitest . --run --pass-with-no-tests",
+    "lint": "eslint .",
+    "prebuild": "rimraf dist/* *.tsbuildinfo"
+  },
+  "author": {
+    "email": "lapteuh+lib-ts@gmail.com",
+    "name": "Artur Gubaidullin"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/arthurgubaidullin/lib-ts.git",
+    "directory": "option"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "typescript": "^5.7.3",
+    "vitest": "^3.0.4"
+  },
+  "files": [
+    "dist/**/*.js",
+    "dist/**/*.d.ts",
+    "dist/**/*.md"
+  ]
+}
