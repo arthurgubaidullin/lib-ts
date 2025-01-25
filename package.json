@@ -3,7 +3,8 @@
   "workspaces": [
     "result/type",
     "option",
-    "bundle"
+    "bundle",
+    "sandbox"
   ],
   "scripts": {
     "build": "turbo build",
