@@ -43,11 +43,12 @@
     "@arthurgubaidullin/option-type",
     "@arthurgubaidullin/function"
   ],
-  "dependencies": {},
-  "devDependencies": {
+  "dependencies": {
     "@arthurgubaidullin/result-type": "*",
     "@arthurgubaidullin/option-type": "*",
-    "@arthurgubaidullin/function": "*",
+    "@arthurgubaidullin/function": "*"
+  },
+  "devDependencies": {
     "typescript": "^5.7.3",
     "vitest": "^3.0.4"
   },
